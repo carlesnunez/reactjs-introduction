@@ -1,0 +1,18 @@
+Que és react?
+-Es un gestor de plantillas la V en el patron MVC
+-Se combina bien con backbone
+-Recarga completa de la interfaz.
+-No genera elementos HTML y modifica el DOM, los componentes generan y renderizan el DOM en memoria. Una vez generado el Virtual DOM ReactJS se encarga de buscar las diferencias entre el DOM real y el virtual y realiza unicamente la smodificaciones necesarias sobre el DOM real, de forma inteligente. Esto implica un mayor consumo de memoria pero no suele ser problema ya que el rendimiento compensa este aspecto.
+
+-React JS se divide en dos tipos de informacion, propiedades del componente(props) y el estado (state). 
+
+Que son las propiedades?
+
+Las propiedades del componente és informacion inmutable que tiene el componente esta informacion se recibe a través del objeto props en el momento en el que se construye el componente.
+
+Esa informacion realmente el componente no la posee, de manera que e sotor componente el responsable de modificarla. Cuando esa informacion se modifique el dueño de la informacion reconstruirá nuevamente todo el virtual DOM asociado a ella.Es por ello que decimos que la informacion es inmutable desde que se crea un componente hasta que se destruye.
+
+Que es el state o estado de un componente?
+Es informacion que si esta gestionada y modificada por el componente. Cuando se realiza algun cambio en el estado del componente como respuesta a una accion del usuario o externa REACTJS renderiza de nuevo el componente por completo.
+
+
