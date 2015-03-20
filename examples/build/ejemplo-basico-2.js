@@ -18,7 +18,7 @@ var ContenedorLista = React.createClass({displayName: "ContenedorLista",
 	},
 
 	render : function(){
-		
+
 		return (React.createElement("div", null, React.createElement("ul", null, 
 			this.state.listaItems.map(function(result) {
            		return (result);

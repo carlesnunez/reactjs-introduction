@@ -18,7 +18,7 @@ var ContenedorLista = React.createClass({
 	},
 
 	render : function(){
-		
+
 		return (<div><ul>
 			{this.state.listaItems.map(function(result) {
            		return (result);
