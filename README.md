@@ -1,28 +1,20 @@
 # Notes About the Repo
-- The presentation is at react_js_barcelona_js.key and react_js_barcelona_js.pdf
+- The presentation is inspired by react js barcelona conference.
 
 - The examples are located in the examples/src directory.
 
 - Run `make` to regenerate javascript files from jsx files (src to build).
 
-- This file includes the transcript of the talk "Introduction to React.js".
+- This file includes the odp presentation file and the pdf transcription of the presentation
 
 
 # Introduction to React.js
 
+Built by Facebook and Instagram, reactJS is a library for building user interfaces, with a clear system.
+Thinked to be used by the MVC, model-view-controller alternating with other popular frameworks like backboneJS.
+How ever we will se that React JS is more than a simply library to work with views.
 
-React.js is a library for building user interfaces, built by Facebook and
-Instagram. In building user interfaces, MVC, model-view-controller design
-pattern is used a lot. React could be thought of as the view in MVC; however we
-will see that it is much more than that.
-
-## History
-
-Let's start with a brief history of React. When Facebook acquired Instagram,
-Instagram didn't have a web site. The Instagram engineers wanted to use the
-internal library that Facebook was using for comments and ads. After some work,
-the internal dependencies were cleared up and the library was open sourced in
-May 2013 at JSConf.
+## Suspicion against REACT JS
 
 Initially, there was heavy suspicion against React. At that conference, people
 were mentioning that Facebook was rethinking all the best practices and making a
@@ -32,52 +24,7 @@ Netflix, Airbnb, Khan Academy are making use of React in their products.
 
 ## Difficulties of Building User Interfaces in Big Applications
 
-We can summarize the basic goal of React as follows: To build big applications where
-data changes over time and to build these applications rapidly and robustly.
-
-Usually it is not an easy job to create interface, but why exactly is that?
-Let's consider a server-side web system. We pull the data out of the
-database, then feed that data to a template later and finally we have the HTML
-output. In many applications, for example in PHP, Django or Rails, this is an
-easy operation. We can abstract this operation as a function that takes some
-data and outputs some HTML.
-
-However when we consider clientside interfaces, things become more difficult. Is
-the language JavaScript at fault here? Is that the real source of difficulty?
-
-Actually until a few years ago, many people thought like that. After all,
-JavaScript was a language that was invented in just 10 days by Brendan Eich. It
-has its fair share of weirdnesses or corner cases.
-
-However, as Douglas Crockford explains in his book "JavaScript the Good Parts",
-although JavaScript looks like C, beneath that clothing lies a Lisp, a flexible
-and functional language. The weirdnesses in the language have been more or less
-fixed over time, with standards like ES6 or with projects like CoffeeScript or
-underscore which support functional paradigms.
-
-So, if the main difficulty in building user interfaces is not the language, what
-is it? When we examine big applications and compare serverside and clientside
-interfaces, we see that the main difficulty lies in managing data that
-changes over time. Let's think about a server side application, we receive the
-data from the database, then send it to the rendering pipeline. During this
-operation, we can assume that the data does not change at all.
-
-However on clientside, things do not work that way. The user opens the browser
-and application and the data is constantly in change after that point. The
-synchronization between view and data becomes a problem. If the same data is
-displayed in multiple locations, this becomes an even more complex issue.
-
-Let's think about a chat application. It should show a list of our online
-friends and the number of online friends. Let's say another one of our friends
-becomes online. If we don't use any user interface libraries, there are two
-changes we need to make: First we should append the name of our friend to the
-list, then we need to increment the number at the top. We have to make
-a partial change, a patch in view.
-
-Even if this looks like a simple example, most of the problems in interface
-building are due to this catch up game between data and view. Some data changes
-in an application, and it is the job of the programmer to ensure that the data
-in the view catches up.
+If you have worked with another javascript libraries, you will know the main problems of work with the views. Sincronize data and view is a big problem when we have a website with a big interaction between the user and the server. When we make a view response to the data, this, maybe can be slow. Here is where React JS can help us.
 
 ## React's Main Philosophy: Re-render All the Time
 
